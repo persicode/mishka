@@ -1,7 +1,21 @@
 @import "../libs/normalize.css";
 @import "variables.scss";
 @import "fonts.scss";
+@import "./mixin/adaptive-mixin.scss";
 
-body {
-  font-family: 'Open Sans', 'Arial', sans-serif;
+.abobus {
+  width: 100px;
+  height: 100px;
+
+  @include mobile {
+    background: red;
+  }
+
+  @include tablet {
+    background: yellow;
+  }
+
+  @include desktop {
+    background: green;
+  }
 }

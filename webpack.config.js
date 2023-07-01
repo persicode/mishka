@@ -64,7 +64,7 @@ module.exports = {
             // Там же можно посмотреть про бабель
             {
                 test: /\.(c|sa|sc)ss$/i,
-                use: [devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
 
             {
@@ -76,7 +76,7 @@ module.exports = {
             },
 
             {
-                test: /\.(jpe?g|png|gif|svg)$/,
+                test: /\.(jpe?g|png|gif|svg)$/i,
                 type: 'asset/resource',
                 use: [
                     {
@@ -95,7 +95,6 @@ module.exports = {
                             gifsicle: {
                                 interlaced: false,
                             },
-                            // the webp option will enable WEBP
                             webp: {
                                 quality: 75
                             }
